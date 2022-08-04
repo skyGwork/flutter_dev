@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-// import 'config/theme/theme_context.dart';
-import 'config/theme/theme_manager.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(const MyApp());
 
@@ -14,12 +12,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      //OR => type two from (theme_manager)
-      theme: getApplicationTheme(),
-
-      //OR => type three from (theme_context_manager)
-      // theme: AppTheme.lightTheme(context),
-
+      themeMode: ThemeMode.light,
+      // themeMode: ThemeMode.dark,
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey,
+        fontFamily: GoogleFonts.lato().fontFamily,
+        appBarTheme: const AppBarTheme(
+          elevation: 0.0,
+        ),
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
       home: const Home(),
     );
   }
@@ -37,11 +41,9 @@ class Home extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                height: 100,
-                child: Text('Working On My App',
-                    style: Theme.of(context).textTheme.headline1),
+            children: const <Widget>[
+              Center(
+                child: Text('Working On My App'),
               )
             ],
           ),
