@@ -29,23 +29,13 @@ class Home extends StatelessWidget {
     return Material(
       child: Scaffold(
         appBar: AppBar(title: const Text('MyApp')),
-        body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            // ignore: prefer_const_literals_to_create_immutables
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(50.0),
-                child: SizedBox(
-                  height: 100,
-                  child: Text(
-                    'Working On My App',
-                    style: Theme.of(context).textTheme.headline5,
-                  ),
-                ),
-              )
-            ],
+        body: Center(
+          child: SizedBox(
+            height: 100,
+            child: Text(
+              'Working On My App',
+              style: Theme.of(context).textTheme.headline5,
+            ),
           ),
         ),
       ),
