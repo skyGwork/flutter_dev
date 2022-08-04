@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../config/router/path.dart';
 import 'browes.dart';
 import 'signin_options/signin.dart';
 import 'signin_options/signup.dart';
@@ -58,10 +59,7 @@ class _LandingPageState extends State<LandingPage> {
           children: [
             MaterialButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Browse()),
-                );
+                Navigator.pushNamed(context, RoutePath.browse);
               },
               child: Text(
                 'Browse',
@@ -73,8 +71,7 @@ class _LandingPageState extends State<LandingPage> {
             ),
             MaterialButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const SignIn()),);
+                Navigator.pushNamed(context, RoutePath.signIn);
               },
               child: Text(
                 'Sign in',

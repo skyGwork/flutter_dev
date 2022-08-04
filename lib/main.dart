@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 // import 'config/theme/theme_context.dart';
+import 'config/router/router.dart';
 import 'config/theme/theme_manager.dart';
 import 'screens/splash_screen.dart';
 
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: getApplicationTheme(),
+      onGenerateRoute: (settings) => generateRoute(settings),
       home: const SplashScreen(),
     );
   }
