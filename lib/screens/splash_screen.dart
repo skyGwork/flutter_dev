@@ -1,5 +1,7 @@
 // import 'dart:async';
 
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import '../config/const/color_manager.dart';
 import '../config/router/path.dart';
@@ -14,6 +16,12 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  void initState() {
+    Timer(const Duration(seconds: 3),
+        () => Navigator.pushNamed(context, RoutePath.landing));
+    super.initState();
+  }
+
   @override
   @override
   Widget build(BuildContext context) {
@@ -38,31 +46,6 @@ class _SplashScreenState extends State<SplashScreen> {
                 color: ColorManager.purple,
               ),
               const SizedBox(height: 100),
-              TextButton(
-                style: ButtonStyle(
-                  foregroundColor:
-                      MaterialStateProperty.all<Color>(const Color(0xFF07083E)),
-                  overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                    (Set<MaterialState> states) {
-                      if (states.contains(MaterialState.hovered)) {
-                        return Colors.blue.withOpacity(.3);
-                      }
-                      if (states.contains(MaterialState.focused) ||
-                          states.contains(MaterialState.pressed)) {
-                        return Colors.blue.withOpacity(0.15);
-                      }
-                      return null; // Defer to the widget's default.
-                    },
-                  ),
-                ),
-                onPressed: () {
-                  Navigator.pushNamed(context, RoutePath.landing);
-                },
-                child: Text(
-                  'Explore',
-                  style: Theme.of(context).textTheme.headline5,
-                ),
-              ),
             ],
           ),
         ),
