@@ -7,19 +7,12 @@ void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      //OR => type two from (theme_manager)
       theme: getApplicationTheme(),
-
-      //OR => type three from (theme_context_manager)
-      // theme: AppTheme.lightTheme(context),
-
       home: const Home(),
     );
   }
