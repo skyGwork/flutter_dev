@@ -10,34 +10,32 @@ class AppTheme {
         fontFamily: GoogleFonts.roboto().fontFamily,
         appBarTheme: AppBarTheme(
           // color: Colors.red,
-          // backgroundColor:Colors.red,
+          // color: ColorManager.primary,
+          // backgroundColor: Colors.red,
           elevation: 10,
-          color: ColorManager.primary,
+          centerTitle: true,
 
           iconTheme: IconThemeData(
-            color: ColorManager.primary,
+            color: ColorManager.white,
           ),
 
-          //todo text theme for appbar
           titleTextStyle: TextStyle(
             fontFamily: 'Quicksand',
             fontWeight: FontWeight.bold,
             fontSize: 20,
-            color: ColorManager.primary,
+            color: ColorManager.white,
             letterSpacing: 1.2,
           ),
         ),
         textTheme: ThemeData.light().textTheme.copyWith(
-              //todo selected text style
               headline5: TextStyle(
                 fontFamily: 'Quicksand',
                 fontSize: 20,
-                color: ColorManager.primary,
+                color: ColorManager.dark,
               ),
-              //todo for buttons
-              button: TextStyle(color: ColorManager.primary),
             ),
       );
+
   static ThemeData darkTheme(BuildContext context) => ThemeData(
         brightness: Brightness.dark,
       );
