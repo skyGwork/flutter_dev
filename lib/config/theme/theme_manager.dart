@@ -48,6 +48,10 @@ ThemeData getApplicationTheme() {
             fontSize: 20,
             color: ColorManager.dark,
           ),
+          bodyText1: TextStyle(
+            fontSize: 16,
+            color: ColorManager.dark,
+          ),
         ),
   );
 }

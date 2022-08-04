@@ -1,9 +1,11 @@
 // import 'dart:async';
 
 import 'package:flutter/material.dart';
+import '../buttons/elevated_button.dart';
+import '../buttons/outlined_button.dart';
+import '../buttons/text_button.dart';
 import '../config/const/color_manager.dart';
 import '../widgets/sel_text.dart';
-import 'landign_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -37,34 +39,51 @@ class _SplashScreenState extends State<SplashScreen> {
                 color: ColorManager.purple,
               ),
               const SizedBox(height: 100),
-              TextButton(
-                style: ButtonStyle(
-                  foregroundColor:
-                      MaterialStateProperty.all<Color>(const Color(0xFF07083E)),
-                  overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                    (Set<MaterialState> states) {
-                      if (states.contains(MaterialState.hovered)) {
-                        return Colors.blue.withOpacity(.3);
-                      }
-                      if (states.contains(MaterialState.focused) ||
-                          states.contains(MaterialState.pressed)) {
-                        return Colors.blue.withOpacity(0.15);
-                      }
-                      return null; // Defer to the widget's default.
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MyTextButton()),
+                      );
                     },
+                    child: Text(
+                      'MyTextButton',
+                      style: Theme.of(context).textTheme.bodyText1,
+                    ),
                   ),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const LandingPage()),
-                  );
-                },
-                child: Text(
-                  'Explore',
-                  style: Theme.of(context).textTheme.headline5,
-                ),
+                  const SizedBox(width: 50),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MyOutLinedButton()),
+                      );
+                    },
+                    child: Text(
+                      'MyOutLinedButton',
+                      style: Theme.of(context).textTheme.bodyText1,
+                    ),
+                  ),
+                  const SizedBox(width: 50),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MyElevatedButton()),
+                      );
+                    },
+                    child: Text(
+                      'MyElevatedButton',
+                      style: Theme.of(context).textTheme.bodyText1,
+                    ),
+                  )
+                ],
               ),
             ],
           ),
