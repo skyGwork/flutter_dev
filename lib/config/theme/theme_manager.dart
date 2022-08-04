@@ -12,27 +12,26 @@ ThemeData getApplicationTheme() {
       // accentColor: Colors.red,
     ),
 
-    fontFamily: 'Quicksand',
-
+    // fontFamily: 'Quicksand',
     // fontFamily: GoogleFonts.roboto().fontFamily,
     primaryTextTheme: GoogleFonts.latoTextTheme(),
 
     appBarTheme: AppBarTheme(
       // color: Colors.red,
       // backgroundColor:Colors.red,
+      // color:ColorManager.primary,
       elevation: 10,
       centerTitle: true,
-      // color:ColorManager.primary,
 
       iconTheme: IconThemeData(
-        color: ColorManager.primary,
+        color: ColorManager.white,
       ),
 
       titleTextStyle: TextStyle(
-        fontFamily: 'Quicksand',
+        // fontFamily: 'Quicksand',
         fontWeight: FontWeight.bold,
+        color: ColorManager.white,
         fontSize: 20,
-        color: ColorManager.primary,
         letterSpacing: 1.2,
       ),
     ),
@@ -42,15 +41,13 @@ ThemeData getApplicationTheme() {
             fontFamily: 'OpenSans',
             fontWeight: FontWeight.bold,
             fontSize: 20,
-            color: ColorManager.darkGrey,
+            color: ColorManager.dark,
           ),
-
           headline5: TextStyle(
             fontFamily: 'Quicksand',
             fontSize: 20,
-            color: ColorManager.grey,
+            color: ColorManager.dark,
           ),
-          // button: const TextStyle(color: Colors.white),
         ),
   );
 }
