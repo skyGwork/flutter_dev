@@ -12,7 +12,7 @@ class SelText extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 50),
+          padding: const EdgeInsets.symmetric(horizontal: 50),
           child: RichText(
             text: TextSpan(
               text: 's',
@@ -52,7 +52,7 @@ class SelText extends StatelessWidget {
             ),
           ),
         ),
-         Padding(
+        Padding(
           padding:
               //  EdgeInsets.all(40),
               const EdgeInsets.symmetric(vertical: 0, horizontal: 75),

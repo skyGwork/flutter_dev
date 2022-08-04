@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import '../config/const/color_manager.dart';
-import '../config/widgets/sel_text.dart';
+import '../widgets/sel_text.dart';
 import 'landign_page.dart';
 
 class SplashScreen extends StatefulWidget {
