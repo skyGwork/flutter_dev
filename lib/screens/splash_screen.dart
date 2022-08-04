@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import '../config/const/color_manager.dart';
+import '../config/router/path.dart';
 import '../config/widgets/sel_text.dart';
 import 'landign_page.dart';
 
@@ -55,11 +56,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                 ),
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const LandingPage()),
-                  );
+                  Navigator.pushNamed(context, RoutePath.landing);
                 },
                 child: Text(
                   'Explore',

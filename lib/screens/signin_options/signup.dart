@@ -9,7 +9,8 @@ class SignupPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('create an account'),
+        child: Text('create an account',
+            style: Theme.of(context).textTheme.headline1),
       ),
     );
   }
