@@ -21,9 +21,9 @@ class MyApp extends StatelessWidget {
           elevation: 0.0,
         ),
       ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-      ),
+      // darkTheme: ThemeData(
+      //   brightness: Brightness.dark,
+      // ),
       home: const Home(),
     );
   }
