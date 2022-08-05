@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'categories_screen.dart';
+import 'gridview_with_map.dart';
 
 void main() => runApp(const MyApp());
 
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       // darkTheme: ThemeData(
       //   brightness: Brightness.dark,
       // ),
-      home: const CategoriesScreen(),
+      home: const GridViewWithMap(),
     );
   }
 }
