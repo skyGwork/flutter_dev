@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'browes.dart';
 import 'signin_options/signin.dart';
-import 'signin_options/signup.dart';
+// import 'signin_options/signup.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({Key? key}) : super(key: key);
@@ -73,8 +73,10 @@ class _LandingPageState extends State<LandingPage> {
             ),
             MaterialButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const SignIn()),);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SignIn()),
+                );
               },
               child: Text(
                 'Sign in',
