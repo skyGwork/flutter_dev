@@ -1,6 +1,7 @@
 // import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_explore/models/landingpage_args.dart';
 import '../config/const/color_manager.dart';
 import '../widgets/sel_text.dart';
 import 'landign_page.dart';
@@ -55,10 +56,14 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                 ),
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.pushNamed(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const LandingPage()),
+                    LandingPage.routeName,
+                    arguments: LandingPageArgs(
+                      note: 'Learn Without Limitations',
+                      quote:
+                          'Learning is training of mind to think expressive.',
+                    ),
                   );
                 },
                 child: Text(

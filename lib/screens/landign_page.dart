@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'browes.dart';
-import 'signin_options/signin.dart';
+import '../models/landingpage_args.dart';
+
 // import 'signin_options/signup.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({Key? key}) : super(key: key);
-
+  static const routeName = '/landing-page';
   @override
   State<LandingPage> createState() => _LandingPageState();
 }
@@ -15,6 +15,8 @@ class LandingPage extends StatefulWidget {
 class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
+    final args = ModalRoute.of(context)!.settings.arguments as LandingPageArgs;
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
@@ -26,7 +28,7 @@ class _LandingPageState extends State<LandingPage> {
               width: 400,
             ),
             Text(
-              'Learn Without Limitations',
+              args.note,
               style: TextStyle(
                 fontFamily: GoogleFonts.comfortaa().fontFamily,
                 color: Colors.grey[900],
@@ -34,9 +36,9 @@ class _LandingPageState extends State<LandingPage> {
               ),
             ),
             const SizedBox(height: 20),
-            const Text(
-              'Learning is training of mind to think expressive',
-              style: TextStyle(
+            Text(
+              args.quote,
+              style: const TextStyle(
                 color: Colors.black,
                 fontSize: 16,
               ),
@@ -57,12 +59,7 @@ class _LandingPageState extends State<LandingPage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             MaterialButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Browse()),
-                );
-              },
+              onPressed: () {},
               child: Text(
                 'Browse',
                 style: TextStyle(
@@ -72,12 +69,7 @@ class _LandingPageState extends State<LandingPage> {
               ),
             ),
             MaterialButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const SignIn()),
-                );
-              },
+              onPressed: () {},
               child: Text(
                 'Sign in',
                 style: TextStyle(

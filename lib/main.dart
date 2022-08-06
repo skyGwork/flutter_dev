@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_explore/screens/landign_page.dart';
 
 // import 'config/theme/theme_context.dart';
 import 'config/theme/theme_manager.dart';
@@ -14,6 +15,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: getApplicationTheme(),
+      routes: {
+        LandingPage.routeName: (context) => const LandingPage(),
+      },
       home: const SplashScreen(),
     );
   }

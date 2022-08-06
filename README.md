@@ -1,16 +1,18 @@
-- [Navigate to the second route using Navigator.push()](https://docs.flutter.dev/cookbook/navigation/navigation-basics#2-navigate-to-the-second-route-using-navigatorpush)
 
 ```dart
-// Within the `FirstRoute` widget
-onPressed: () {
-  Navigator.push(
+ onPressed: () {
+  Navigator.pushNamed(
     context,
-    MaterialPageRoute(builder: (context) => const SecondRoute()),
+    LandingPage.routeName,
+    arguments: LandingPageArgs(
+      note: 'Learn Without Limitations',
+      quote:
+          'Learning is training of mind to think expressive.',
+    ),
   );
-}
+},
 ```
 
-- [Return to the first route using Navigator.pop()](https://docs.flutter.dev/cookbook/navigation/navigation-basics#3-return-to-the-first-route-using-navigatorpop)
 
 ```dart
 // Within the SecondRoute widget
