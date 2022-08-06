@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_explore/screens/landign_page.dart';
 
 // import 'config/theme/theme_context.dart';
+import 'config/router/path.dart';
 import 'config/theme/theme_manager.dart';
 import 'screens/splash_screen.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: getApplicationTheme(),
       routes: {
-        LandingPage.routeName: (context) => const LandingPage(),
+        RoutePath.landingPage: (context) => const LandingPage(),
       },
       home: const SplashScreen(),
     );
